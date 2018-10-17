@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AnnotationView from './views/AnnotationView';
 import Nav from './components/Nav';
 import FeedbackCollector from './components/FeedbackCollector/index'
+import Modal from './components/Modal/index'
 
 
 class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -35,7 +36,9 @@ class App extends React.Component { // eslint-disable-line react/prefer-stateles
 					Modal
 				</button>
 				{this.state.isModalOpen &&
-				<FeedbackCollector onModalClose={this.handleModalClose} />
+				<Modal onModalClose={this.handleModalClose}>
+					<FeedbackCollector />
+				</Modal>
 				}
 			</div>
 		);
