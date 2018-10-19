@@ -76,14 +76,15 @@ class FeedbackCollector extends React.Component {
 				<button>Dodaj obrazek</button>
 				<p className="label">I podać linki do stron, na których wystąpił problem</p>
 				<input
+					className="link-input"
 					type="text"
 					name="websiteLink"
 					// onChange={this.handleInputChange}
 					placeholder="Wklej link do źródła"
 				/>
-				<div>
-					<button>Anuluj</button>
-					<button>Wyślij</button>
+				<div className="submit-button-bar">
+					<button className={cnames('action-buttom', 'cancel')}>Anuluj</button>
+					<button className={cnames('action-buttom', 'submit')}>Wyślij</button>
 				</div>
 			</div>
 		)

@@ -34,7 +34,7 @@
 
 }
 
-.feedback-comment {
+.feedback-comment, .link-input {
     padding: 0.5em;
     border: 1px solid #D8DADA;
     outline: none;
@@ -45,11 +45,48 @@
     background: none;
     resize: none;
     width: 400px;
-    height: 9em;
     font-size: 13px;
+}
+
+.feedback-comment {
+    height: 9em;
+}
+
+.link-input {
+    height: 1.5em;
 }
 
 .label {
     font-size: 13px;
     font-weight: 600;
+}
+
+.submit-button-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 5px;
+
+    .action-buttom + .action-buttom {
+        margin-left: 15px;
+    }
+
+}
+
+.action-buttom {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.submit {
+        color: #33239B;
+    }
+
+    &.cancel {
+        color: rgb(136, 136, 136);
+    }
 }
