@@ -1,5 +1,7 @@
 import {hot} from 'react-hot-loader';
 import * as React from 'react';
+import cnames from 'classnames';
+
 import { Icon } from 'react-icons-kit';
 import {hammer} from 'react-icons-kit/icomoon/hammer'
 import {confused} from 'react-icons-kit/icomoon/confused'
@@ -13,55 +15,66 @@ import {message} from 'react-icons-kit/entypo/message'
 
 
 
+import './index.scss';
 
-
-
-
-
-
-
-import './index.scss'
+const FeedbackTypes = {
+	BUG: 'bug',
+	ANNOYING: 'annoying',
+	OTHER: 'other',
+}
 
 
 class FeedbackCollector extends React.Component {
 	constructor() {
 		super()
-		// this.state =
-
+		this.state = {feedbackType: 'bug'}
 	}
+
 	handleClick = (e) =>
 		e.stopPropagation();
 
+	handleTypeChange = (type) =>
+		this.setState({feedbackType: type})
+
 	render() {
 		console.log(this.props);
+		console.log(this.state);
 
 		return (
 			<div className="feedback-collector" onClick={(e) => this.handleClick(e)}>
-				feedback
 				<div>
-					<button className="feedback-type-button">
-						<Icon icon={bug} size={30}/>
-						Coś nie działa
+					<button
+						className={cnames('feedback-type-button', this.state.feedbackType === FeedbackTypes.BUG ? 'selected' : '')}
+						onClick={() => this.handleTypeChange('bug')}
+					>
+						<Icon icon={bug} size={30} className="button-icon"/>
+						<span>Coś nie działa</span>
 					</button>
-					<button className="feedback-type-button">
-						<Icon icon={hand} size={30}/>
-						Przeszkadza mi, że
+					<button
+						className={cnames('feedback-type-button', this.state.feedbackType === FeedbackTypes.ANNOYING ? 'selected' : '')}
+						onClick={() => this.handleTypeChange('annoying')}
+					>
+						<Icon icon={hand} size={30} className="button-icon"/>
+						<span>Przeszkadza mi, że</span>
 					</button>
-					<button className="feedback-type-button">
-						<Icon icon={message} size={30}/>
-						Inne uwagi
+					<button
+						className={cnames('feedback-type-button', this.state.feedbackType === FeedbackTypes.OTHER ? 'selected' : '')}
+						onClick={() => this.handleTypeChange('other')}
+					>
+						<Icon icon={message} size={30} className="button-icon"/>
+						<span>Inne uwagi</span>
 					</button>
 				</div>
-				<p>Co jest nie tak?</p>
+				<p className="label">Co jest nie tak?</p>
 				<textarea
 					className="feedback-comment"
 					name="comment"
 					// onChange={}
 					placeholder="Daj nam znać o błędzie, abyśmy mogli go naprawić"
 				/>
-				<p>Możesz też wrzucić screenshota</p>
+				<p className="label">Możesz też wrzucić screenshota</p>
 				<button>Dodaj obrazek</button>
-				<p>I podać linki do stron, na których wystąpił problem</p>
+				<p className="label">I podać linki do stron, na których wystąpił problem</p>
 				<input
 					type="text"
 					name="websiteLink"
