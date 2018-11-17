@@ -1,15 +1,16 @@
 import { hot } from 'react-hot-loader';
 import * as React from 'react';
-import Card from '@material-ui/core/Card';
-import { withStyles } from '@material-ui/core/styles';
 
 
-// import './styles/theme.sass';
 
-import AnnotationView from './views/AnnotationView';
-import Nav from './components/Nav';
+import './index.scss';
+
+
 import FeedbackCollector from './components/FeedbackCollector/index'
+import AnnotationCard from './components/AnnotationCard/index'
 import Modal from './components/Modal/index'
+
+import annotations from './fixtures/annotations.json'
 
 
 class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -32,14 +33,17 @@ class App extends React.Component { // eslint-disable-line react/prefer-stateles
 
 		return (
 			<div className="page-container">
-				<button onClick={this.openModal}>
+				{/* <button onClick={this.openModal}>
 					Modal
-				</button>
-				{this.state.isModalOpen &&
+				</button> */}
+				<div className="annotation-wrapper">
+					{annotations.map((annotation) => <AnnotationCard annotation={annotation} />)}
+				</div>
+				{/* {this.state.isModalOpen &&
 				<Modal onModalClose={this.handleModalClose}>
 					<FeedbackCollector />
 				</Modal>
-				}
+				} */}
 			</div>
 		);
 	}

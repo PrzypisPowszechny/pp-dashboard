@@ -1,0 +1,472 @@
+[
+	{
+		"id": "1936",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://twitter.com/pisorgpl/status/1063006385154244613",
+			"range": null,
+			"quote": "Współpraca handlowa pomiędzy stroną polską a czeską jest bardzo dobra. Cała grupa #V4 jest największym partnerem handlowym Niemiec.",
+			"quoteContext": "",
+			"publisher": "DEMAGOG",
+			"ppCategory": "ADDITIONAL_INFO",
+			"demagogCategory": "TRUE",
+			"comment": "Według rankingu partnerów handlowych Niemiec z 2017 roku\nobrót wymiany handlowej (eksport+import) z krajami Grupy Wyszehradzkiej wyniósł:\nPolska - 109 537 189 000, ok. 110 mld euro\nSłowacja - 27 96...",
+			"annotationLink": "http://demagog.org.pl?p=7675",
+			"annotationLinkTitle": "Demagog.org.pl",
+			"createDate": "2018-11-17T14:55:27.349544Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "61",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1936/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1936/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1936/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1936"
+		}
+	},
+	{
+		"id": "1935",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://www.radiozet.pl/Radio/Programy/Gosc-Radia-ZET/Jacek-Sasin-Nigdy-nie-zapowiadalismy-500-dla-emerytow",
+			"range": {
+				"start": "/div[9]/article[1]/div[1]/section[1]/div[4]/h2[1]",
+				"startOffset": 28,
+				"end": "/div[9]/article[1]/div[1]/section[1]/div[4]/h2[1]",
+				"endOffset": 54
+			},
+			"quote": "Absurdalne ruchy człowieka",
+			"quoteContext": "ef Komitetu Stałego Rady Ministrów. Bardzo dziękuję. \nDziękuję bardzo. \n„Tonący brzytwy się chwyta. Absurdalne ruchy człowieka, który nie rozumie na czym polega demokracja” – Jacek Sasin o liderze PO, który nie wyklucza pozwan",
+			"publisher": "PP",
+			"ppCategory": "CLARIFICATION",
+			"demagogCategory": null,
+			"comment": "X Y Z",
+			"annotationLink": "http://demagog.org.pl/wypowiedzi/ryszard-czarnecki-na-temat-artykulu-siodmego-traktatu-o-unii-europejskiej/",
+			"annotationLinkTitle": "weryfikacja demagoga",
+			"createDate": "2018-11-17T12:31:24.117523Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "73",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1935/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1935/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1935/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1935"
+		}
+	},
+	{
+		"id": "1934",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://www.rmf24.pl/tylko-w-rmf24/popoludniowa-rozmowa/news-adam-struzik-jestem-kandydatem-psl-na-marszalka-wojewodztwa-,nId,2650826",
+			"range": null,
+			"quote": "(…) cztery lata temu my mieliśmy 16 mandatów, PO – 15. Układ w zarządzie województwa był 3:2 na korzyść PO.",
+			"quoteContext": "",
+			"publisher": "DEMAGOG",
+			"ppCategory": "ADDITIONAL_INFO",
+			"demagogCategory": "TRUE",
+			"comment": "Zgodnie z informacjami zawartymi na stronie Samorządu Województwa Mazowieckiego, w V kadencji sejmiku (2014-2018) spośród 50 radnych ogółem, 16 pochodziło z Polskiego Stronnictwa Ludowego, a 15 z P...",
+			"annotationLink": "http://demagog.org.pl?p=7592",
+			"annotationLinkTitle": "Demagog.org.pl",
+			"createDate": "2018-11-16T18:55:52.508011Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "61",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1934/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1934/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1934/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1934"
+		}
+	},
+	{
+		"id": "1933",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://forsal.pl/artykuly/1339325,glinski-onr-nie-ma-w-polsce-najmniejszego-znaczenia-politycznego-wywiad.html",
+			"range": null,
+			"quote": "Żadna brygada ONR-u nie ma w Polsce najmniejszego znaczenia politycznego. To margines marginesów, znacznie mniejszy niż w krajach ościennych.",
+			"quoteContext": "",
+			"publisher": "DEMAGOG",
+			"ppCategory": "ADDITIONAL_INFO",
+			"demagogCategory": "TRUE",
+			"comment": "Obóz Narodowo-Radykalny to organizacja, działająca w formie stowarzyszenia. Nie startuje on samodzielnie w wyborach, aczkolwiek pojedynczy jego działacze startują czasami z list innych komitetów, n...",
+			"annotationLink": "http://demagog.org.pl?p=7635",
+			"annotationLinkTitle": "Demagog.org.pl",
+			"createDate": "2018-11-16T18:41:18.366083Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "61",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1933/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1933/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1933/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1933"
+		}
+	},
+	{
+		"id": "1932",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://twitter.com/MarcinSwiecicki/status/1059538838647902210",
+			"range": null,
+			"quote": "Wg PIS w miastach mieszka 15% ludności Polski. Chyba mylą im się  procenty z milionami. W 107 miastach prezydenckich mieszka 15 mln osób, co stanowi 39% ludności. We wszystkich miastach mieszka ponad 60%  ludności Polski.",
+			"quoteContext": "",
+			"publisher": "DEMAGOG",
+			"ppCategory": "ADDITIONAL_INFO",
+			"demagogCategory": "TRUE",
+			"comment": "Według danych Głównego Urzędu Statystycznego w I półroczu 2018 r. w miastach mieszkało 23,1 mln osób, tj. 60% populacji Polski. We wszystkich 107 miastach prezydenckich liczba ta wynosiła 14,9 mln ...",
+			"annotationLink": "http://demagog.org.pl?p=7620",
+			"annotationLinkTitle": "Demagog.org.pl",
+			"createDate": "2018-11-16T18:41:17.786061Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "61",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1932/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1932/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1932/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1932"
+		}
+	},
+	{
+		"id": "1931",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://twitter.com/MKierwinski/status/1056234972372238337?ref_src=twsrc%5Etfw",
+			"range": null,
+			"quote": "Oddano 1 strzelnicę z zapowiadanych przez Macierewicza 380.",
+			"quoteContext": "",
+			"publisher": "DEMAGOG",
+			"ppCategory": "CLARIFICATION",
+			"demagogCategory": "LIE",
+			"comment": "A. Macierewicz sprawował urząd ministra obrony narodowej od 16 listopada 2015 roku do 9 stycznia 2018 roku. Pierwsze informacje dotyczące programu MON dofinansowania budowy i rewitalizacji strzelni...",
+			"annotationLink": "http://demagog.org.pl?p=7591",
+			"annotationLinkTitle": "Demagog.org.pl",
+			"createDate": "2018-11-16T18:41:17.222623Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "61",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1931/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1931/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1931/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1931"
+		}
+	},
+	{
+		"id": "1930",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://www.polskieradio.pl/9/7177/Artykul/2212993,Start-NaGranie%C2%A0IGNU-triumfuje-w-szostym%C2%A0odcinku",
+			"range": {
+				"start": "/div[2]/form[1]/div[3]/div[3]/div[3]/div[1]/div[2]/div[1]/article[1]/div[1]/div[5]/span[1]/p[7]",
+				"startOffset": 47,
+				"end": "/div[2]/form[1]/div[3]/div[3]/div[3]/div[1]/div[2]/div[1]/article[1]/div[1]/div[5]/span[1]/p[7]",
+				"endOffset": 123
+			},
+			"quote": "iewie z inicjatywy Piotra Dawidka i Huberta Wiśniewskiego. Projekt dwuosobow",
+			"quoteContext": "certową z finami z Death Hawks i grekami z Naxatras.\nThe Cassino – zespół powstał w 2013 roku w Braniewie z inicjatywy Piotra Dawidka i Huberta Wiśniewskiego. Projekt dwuosobowy (perkusja, gitara/wokal), potem rozwinięty o basistę zaczął nabierać tempa po występie w 11. edycj",
+			"publisher": "PP",
+			"ppCategory": "ADDITIONAL_INFO",
+			"demagogCategory": null,
+			"comment": "xcvxcv",
+			"annotationLink": "xsdf.pl",
+			"annotationLinkTitle": "sdfsf",
+			"createDate": "2018-11-10T14:22:31.161801Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "74",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1930/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1930/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1930/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1930"
+		}
+	},
+	{
+		"id": "1929",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://docs.djangoproject.com/en/2.1/ref/csrf/",
+			"range": {
+				"start": "/div[4]/div[1]/div[2]/div[1]/p[1]",
+				"startOffset": 141,
+				"end": "/div[4]/div[1]/div[2]/div[1]/p[1]",
+				"endOffset": 364
+			},
+			"quote": "malicious website contains a link, a form button or some JavaScript that is intended to perform some action on your website, using the credentials of a logged-in user who visits the malicious site in their browser. A rela",
+			"quoteContext": "vides easy-to-use protection against Cross Site Request Forgeries. This type of attack occurs when a malicious website contains a link, a form button or some JavaScript that is intended to perform some action on your website, using the credentials of a logged-in user who visits the malicious site in their browser. A related type of attack, ‘login CSRF’, where an attacking site tricks a user’s browser into logging into",
+			"publisher": "PP",
+			"ppCategory": "ADDITIONAL_INFO",
+			"demagogCategory": null,
+			"comment": "asdasdas",
+			"annotationLink": "dsadas.pl",
+			"annotationLinkTitle": "sdasdas",
+			"createDate": "2018-10-30T23:15:56.828349Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "71",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1929/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1929/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1929/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1929"
+		}
+	},
+	{
+		"id": "1928",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://docs.djangoproject.com/en/2.1/ref/csrf/",
+			"range": {
+				"start": "/div[4]/div[1]/div[2]/div[1]/div[7]/p[1]",
+				"startOffset": 78,
+				"end": "/div[4]/div[1]/div[2]/div[1]/div[7]/p[1]",
+				"endOffset": 182
+			},
+			"quote": "l pattern envisaged here. A number of utilities can be useful in these situations. The scenarios they mi",
+			"quoteContext": "rowsers.\n\nEdge cases¶\nCertain views can have unusual requirements that mean they don’t fit the normal pattern envisaged here. A number of utilities can be useful in these situations. The scenarios they might be needed in are described in the following section.\nUtilities¶\nThe examples below assume you ar",
+			"publisher": "PP",
+			"ppCategory": "ADDITIONAL_INFO",
+			"demagogCategory": null,
+			"comment": "Hej",
+			"annotationLink": "nanana.pl",
+			"annotationLinkTitle": "dsfs",
+			"createDate": "2018-10-29T20:33:34.310940Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "72",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1928/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1928/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1928/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1928"
+		}
+	},
+	{
+		"id": "1927",
+		"type": "annotations",
+		"attributes": {
+			"url": "https://twitter.com/r_czarnecki/statuses/440804566112948224",
+			"range": null,
+			"quote": "1/2 Minister Sikorski wybiera się do Iranu- kraju, w którym tylko w 2013 roku przeprowadzono wg oficjalnych danych 660(!) egzekucji.\n— Ryszard Czarnecki (@r_czarnecki) marzec 4, 2014\n2/2 A w tym roku juz 140.Każdy ma takich partnerów, jakich… wybiera!\n— Ryszard Czarnecki (@r_czarnecki) marzec 4, 2014",
+			"quoteContext": "",
+			"publisher": "DEMAGOG",
+			"ppCategory": "CLARIFICATION",
+			"demagogCategory": "LIE",
+			"comment": "R. Czarnecki używa pojęcia “oficjalne dane\", które sugeruje, że opiera się on na danych publikowanych przez irańskie sądownictwo bądź urzędy statystyczne. Takie dane oczywiście istnieją, ale prezen...",
+			"annotationLink": "http://demagog.org.pl?p=141",
+			"annotationLinkTitle": "Demagog.org.pl",
+			"createDate": "2018-10-26T20:10:01.612732Z",
+			"upvoteCountExceptUser": 0,
+			"doesBelongToUser": false
+		},
+		"relationships": {
+			"user": {
+				"data": {
+					"id": "61",
+					"type": "users"
+				},
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1927/user"
+				}
+			},
+			"annotationUpvote": {
+				"data": null,
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1927/upvote"
+				}
+			},
+			"annotationReports": {
+				"data": [],
+				"links": {
+					"related": "https://devdeploy1.przypispowszechny.pl/api/annotations/1927/reports"
+				}
+			}
+		},
+		"links": {
+			"self": "https://devdeploy1.przypispowszechny.pl/api/annotations/1927"
+		}
+	}
+]
