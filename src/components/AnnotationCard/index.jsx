@@ -4,6 +4,7 @@ import cnames from 'classnames';
 import moment from 'moment';
 
 import {Icon} from 'react-icons-kit';
+import { ic_star } from 'react-icons-kit/md/ic_star';
 
 import './index.scss';
 
@@ -69,21 +70,32 @@ class AnnotationCard extends React.Component {
 
 	render() {
 		const annotationAttrs = this.props.annotation.attributes;
+		const { annotationUpvote } = this.props.annotation.relationships;
+    const totalUpvoteCount = this.props.annotation.attributes.upvoteCountExceptUser + (annotationUpvote.data ? 1 : 0);
 		return (
 			<a href={annotationAttrs.url} target="_blank">
 				<div className="annotation-card">
 					<div className="top-bar">
+						<div className={cnames(annotationAttrs.publisher === AnnotationPublishers.DEMAGOG ? "demagog-icon" : '')} />
+						{/* {annotationAttrs.publisher === AnnotationPublishers.DEMAGOG && <div className="demagog-icon" />} */}
 						<p className="host-name">{extractHostname(annotationAttrs.url)}</p>
 					</div>
-					<p className="quote">
-						{annotationAttrs.quote}
-					</p>
-					<p className={cnames('comment', ppCategoryToClass[annotationAttrs.ppCategory])}>
-						{annotationAttrs.comment}
-					</p>
-					<div className="middle-bar">
-						<p className="host-name">{moment(annotationAttrs.createDate).fromNow()}</p>
-						{annotationAttrs.publisher === AnnotationPublishers.DEMAGOG && <div className="demagog-icon" />}
+					<div className="content-wrapper">
+						<p className="quote">
+							{annotationAttrs.quote}
+						</p>
+						<p className={cnames('comment', ppCategoryToClass[annotationAttrs.ppCategory])}>
+							{annotationAttrs.comment}
+						</p>
+					</div>
+					<div className="bottom-bar">
+						<div>
+							<p className="host-name">{moment(annotationAttrs.createDate).fromNow()}</p>
+						</div>
+						<p className="upvote-count">
+							<Icon icon={ic_star} size={18} />
+							<span>{totalUpvoteCount}</span>
+						</p>
 					</div>
 				</div>
 			</a>

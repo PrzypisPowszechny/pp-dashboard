@@ -7,7 +7,7 @@ import './index.scss';
 
 
 import FeedbackCollector from './components/FeedbackCollector/index'
-import AnnotationCard from './components/AnnotationCard/index'
+import AnnotationGrid from './components/AnnotationGrid/index'
 import Modal from './components/Modal/index'
 
 import annotations from './fixtures/annotations.json'
@@ -29,21 +29,10 @@ class App extends React.Component { // eslint-disable-line react/prefer-stateles
 	}
 
 	render() {
-		console.log(this.state);
 
 		return (
 			<div className="page-container">
-				{/* <button onClick={this.openModal}>
-					Modal
-				</button> */}
-				<div className="annotation-wrapper">
-					{annotations.map((annotation) => <AnnotationCard annotation={annotation} />)}
-				</div>
-				{/* {this.state.isModalOpen &&
-				<Modal onModalClose={this.handleModalClose}>
-					<FeedbackCollector />
-				</Modal>
-				} */}
+				<AnnotationGrid annotations={annotations} />
 			</div>
 		);
 	}
