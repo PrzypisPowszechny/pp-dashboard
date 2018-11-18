@@ -7,7 +7,7 @@ import {Icon} from 'react-icons-kit';
 import AnnotationCard from '../AnnotationCard/index'
 
 
-import './index.scss';
+import styles from './index.scss';
 
 // url: string;
 // range: RangeAPIModel;
@@ -52,8 +52,11 @@ class AnnotationGrid extends React.Component {
 
 	render() {
 		return (
-			<div className="annotation-grid">
-				{this.props.annotations.map((annotation) => <AnnotationCard annotation={annotation} />)}
+			<div className={styles.annotationGrid}>
+				{this.props.annotations.map((annotation) =>
+					(<div className={styles.cardContainer}>
+						<AnnotationCard annotation={annotation} />
+					</div>))}
 			</div>
 		)
 	}

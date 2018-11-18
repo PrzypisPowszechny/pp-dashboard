@@ -25,12 +25,28 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &:hover {
+
+        .quote.additional-info {
+            color: darken($additional-info-color, 5%);
+        }
+
+        .quote.clarification {
+            color: darken($clarification-color, 5%);
+        }
+
+        .quote.error {
+            color: $error-color;
+      }
+    }
 }
 
 .top-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin-bottom: 7px;
 }
 
 .bottom-bar {
@@ -53,14 +69,24 @@ a {
     font-size: 12px;
     text-align: right;
     margin: 0;
+    display: inline;
     color: $secondary-font-color;
+}
+
+.date {
+    font-size: 12px;
+    text-align: right;
+    margin: 0;
+    color: $secondary-font-color;
+    display: inline;
 }
 
 .demagog-icon {
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    vertical-align: sub;
     background-image: url('../../assets/demagog_logo.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -69,10 +95,9 @@ a {
 
   .quote {
       font-style: italic;
-      font-size: 14px;
       text-decoration: none;
       margin: 0;
-      max-height: 80px;
+      max-height: 90px;
       overflow-y: hidden;
 
     }
@@ -102,7 +127,7 @@ a {
       font-size: 12px;
       font-weight: 500;
       margin: 0;
-      color: $icon-button-color;
+      color: $secondary-font-color;
       display: flex;
       align-items: center;
 
