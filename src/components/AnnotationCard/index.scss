@@ -9,6 +9,12 @@ $grey-03: rgb(59, 67, 71);
 $secondary-font-color: $grey-02;
 $icon-button-color: $grey-03;
 
+$demagog-color: rgb(255,59,0);
+$demagog-true-color: #6ABA43;
+$demagog-false-color: #E84F2B;
+$demagog-lie-color: #FEBC1E;
+$demagog-unknown-color: #229EE5;
+
 a {
     text-decoration: none !important;
     color: black;
@@ -18,12 +24,12 @@ a {
 .annotation-card {
     font-family: $open-sans;
     background-color: white;
-    width: 320px;
-    height: 220px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
     padding: 15px 20px;
+    height: 100%;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
 
     &:hover {
@@ -42,11 +48,32 @@ a {
     }
 }
 
-.top-bar {
+.left {
+    flex: 2;
+    overflow-x: hidden;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.right {
+    flex: 3;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.separator {
+    width: 1px;
+    margin: 0 20px;
+    background-color: #ECF0F6;
+}
+
+.top-bar {
     margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .bottom-bar {
@@ -68,9 +95,11 @@ a {
 .host-name {
     font-size: 12px;
     text-align: right;
-    margin: 0;
-    display: inline;
     color: $secondary-font-color;
+    // margin-top: auto;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
 }
 
 .date {
@@ -79,47 +108,59 @@ a {
     margin: 0;
     color: $secondary-font-color;
     display: inline;
+    margin-left: auto;
 }
 
 .demagog-icon {
+    border: 1px solid $demagog-color;
+    border-radius: 50%;
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
     vertical-align: sub;
     background-image: url('../../assets/demagog_logo.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 70%;
   }
 
   .quote {
-      font-style: italic;
+      font-size: 12px;
       text-decoration: none;
       margin: 0;
-      max-height: 90px;
+      white-space: normal;
       overflow-y: hidden;
+      overflow-x: hidden;
+      cursor: pointer;
 
     }
 
     .comment {
         font-size: 12px;
-        border-left: 4px solid $additional-info-color;
-        padding-left: 10px;
         text-decoration: none;
         font-weight: 300;
 
+    }
+
+    .categoryMarker {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $secondary-font-color;
+        display: inline-block;
+
 
     &.additional-info {
-        border-left-color: $additional-info-color;
+        background-color: $additional-info-color;
     }
 
     &.clarification {
-        border-left-color: $clarification-color;
+        background-color: $clarification-color;
     }
 
     &.error {
-        border-left-color: $error-color;
+        background-color: $error-color;
   }
   }
 
@@ -128,8 +169,12 @@ a {
       font-weight: 500;
       margin: 0;
       color: $secondary-font-color;
+      width: 100%;
       display: flex;
       align-items: center;
+      justify-content: flex-end;
+      position: absolute;
+      bottom: 0;
 
       span {
           margin-left: 3px;

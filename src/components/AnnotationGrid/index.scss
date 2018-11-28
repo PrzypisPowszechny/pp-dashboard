@@ -2,11 +2,15 @@
 .annotation-grid {
     display: flex;
     flex-wrap: wrap;
-    background-color: #ececec;
+    padding: 20px 10px;
+    justify-content: center;
 
 
     .card-container {
         margin-right: 20px;
         margin-bottom: 20px;
+        display: inline;
+        width: 425px;
+        height: 260px;
     }
 }

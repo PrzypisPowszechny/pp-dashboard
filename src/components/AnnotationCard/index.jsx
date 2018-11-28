@@ -73,32 +73,55 @@ class AnnotationCard extends React.Component {
 		const { annotationUpvote } = this.props.annotation.relationships;
     const totalUpvoteCount = this.props.annotation.attributes.upvoteCountExceptUser + (annotationUpvote.data ? 1 : 0);
 		return (
-			<a className={styles.annotationCard} href={annotationAttrs.url} target="_blank">
-				<div>
-					<div className={styles.topBar}>
-
-						{/* <div className={cnames(annotationAttrs.publisher === AnnotationPublishers.DEMAGOG ? styles.demagogIcon : '')} /> */}
-						<p className={cnames(styles.hostName)}>{extractHostname(annotationAttrs.url)}</p>
-					</div>
+			<div className={styles.annotationCard}>
+				<div className={styles.left}>
 					<p className={cnames(styles.quote, ppCategoryToClass[annotationAttrs.ppCategory])}>
-						{annotationAttrs.quote}
+						{'"' + annotationAttrs.quote + '"'}
 					</p>
-					<p className={cnames(styles.comment, ppCategoryToClass[annotationAttrs.ppCategory])}>
-						<div className={cnames(annotationAttrs.publisher === AnnotationPublishers.DEMAGOG ? styles.demagogIcon : '')} />
-						{annotationAttrs.comment}
-					</p>
+					<p className={cnames(styles.hostName)}>{extractHostname(annotationAttrs.url)}</p>
 				</div>
-
-				<div className={styles.bottomBar}>
-					<div>
+				<div className={styles.separator}></div>
+				<div className={styles.right}>
+					<div className={styles.topBar}>
+						<div className={cnames(styles.categoryMarker, ppCategoryToClass[annotationAttrs.ppCategory])}></div>
+						<div className={cnames(annotationAttrs.publisher === AnnotationPublishers.DEMAGOG ? styles.demagogIcon : '')} />
 						<p className={styles.date}>{moment(annotationAttrs.createDate).fromNow()}</p>
 					</div>
+					<p className={cnames(styles.comment, ppCategoryToClass[annotationAttrs.ppCategory])}>
+						{/* <div className={cnames(annotationAttrs.publisher === AnnotationPublishers.DEMAGOG ? styles.demagogIcon : '')} /> */}
+						{annotationAttrs.comment}
+					</p>
 					<p className={styles.upvoteCount}>
 						<Icon icon={ic_star} size={18} />
 						<span>{totalUpvoteCount}</span>
 					</p>
 				</div>
-			</a>
+
+			</div>
+			// <a className={styles.annotationCard} href={annotationAttrs.url + "#pp-annotation-" + this.props.annotation.id} target="_blank">
+			// 	<div>
+			// 		<div className={styles.topBar}>
+
+			// 			{/* <div className={cnames(annotationAttrs.publisher === AnnotationPublishers.DEMAGOG ? styles.demagogIcon : '')} /> */}
+			// 			<p className={cnames(styles.hostName)}>{extractHostname(annotationAttrs.url)}</p>
+			// 		</div>
+
+			// 		<p className={cnames(styles.comment, ppCategoryToClass[annotationAttrs.ppCategory])}>
+			// 			<div className={cnames(annotationAttrs.publisher === AnnotationPublishers.DEMAGOG ? styles.demagogIcon : '')} />
+			// 			{annotationAttrs.comment}
+			// 		</p>
+			// 	</div>
+
+			// 	<div className={styles.bottomBar}>
+			// 		<div>
+			// 			<p className={styles.date}>{moment(annotationAttrs.createDate).fromNow()}</p>
+			// 		</div>
+					// <p className={styles.upvoteCount}>
+					// 	<Icon icon={ic_star} size={18} />
+					// 	<span>{totalUpvoteCount}</span>
+					// </p>
+			// 	</div>
+			// </a>
 		)
 	}
 }

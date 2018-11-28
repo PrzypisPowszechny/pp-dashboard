@@ -1,11 +1,13 @@
 import { hot } from 'react-hot-loader';
 import * as React from 'react';
 
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import styles from './index.scss';
 
-import AnnotationGrid from '../components/AnnotationGrid'
+import Navigation from '../components/Navigation'
+import PageAnnotationsFeed from '../pages/PageAnnotationsFeed'
+import PageUserAnnotations from '../pages/PageUserAnnotations'
 
 import annotations from '../fixtures/annotations.json'
 
@@ -25,15 +27,32 @@ class UserPanel extends React.Component { // eslint-disable-line react/prefer-st
 		this.setState({isModalOpen: false})
 	}
 
+
+
 	render() {
-
 		return (
-			<div className={styles.panel}>
-				<div className={styles.pageContainer}>
+			<Router>
+				<div className={styles.panel}>
+					<div className={styles.topBar}>
+						<Navigation />
+					</div>
+					<div className={styles.pageContainer}>
+						<Switch >
+							<Route
+								exact
+								path="/"
+								render={() => <PageAnnotationsFeed />}
+							/>
+							<Route
+								exact
+								path="/userAnnotations"
+								render={() => <PageUserAnnotations />}
+							/>
 
+						</Switch>
+					</div>
 				</div>
-				<AnnotationGrid annotations={annotations} />
-			</div>
+			</Router>
 		);
 	}
 }

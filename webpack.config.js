@@ -37,6 +37,7 @@ module.exports = {
 		contentBase: '.tmp',
 		hot: true,
 		port: 3000,
+		historyApiFallback: true,
 	},
 
 	module: {
