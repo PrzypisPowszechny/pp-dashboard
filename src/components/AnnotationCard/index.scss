@@ -25,39 +25,67 @@ a {
     font-family: $open-sans;
     background-color: white;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
-    padding: 15px 20px;
     height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    &:hover {
+    // &:hover {
 
-        .quote.additional-info {
-            color: darken($additional-info-color, 5%);
-        }
+    //     .quote.additional-info {
+    //         color: darken($additional-info-color, 25%);
+    //     }
 
-        .quote.clarification {
-            color: darken($clarification-color, 5%);
-        }
+    //     .quote.clarification {
+    //         color: darken($clarification-color, 25%);
+    //     }
 
-        .quote.error {
-            color: $error-color;
-      }
-    }
+    //     .quote.error {
+    //         color: darken($error-color, 25%);
+    //   }
+    // }
 }
 
 .left {
     flex: 2;
     overflow-x: hidden;
     display: flex;
+    padding: 15px 20px;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    cursor: pointer;
+
+    &:hover {
+
+       &.additional-info {
+        background-color: lighten($additional-info-color, 45%);
+
+        .quote {
+            color: darken($additional-info-color, 25%);
+        }
+
+        }
+
+    &.clarification {
+        background-color: lighten($clarification-color, 45%);
+        .quote {
+            color: darken($clarification-color, 25%);
+        }
+        }
+
+    &.error {
+        background-color: lighten($error-color, 45%);
+        .quote {
+            color: darken($error-color, 25%);
+      }
+    }
+    }
 }
 
 .right {
+    padding: 15px 20px;
     flex: 3;
     overflow-x: hidden;
     position: relative;
@@ -66,7 +94,6 @@ a {
 
 .separator {
     width: 1px;
-    margin: 0 20px;
     background-color: #ECF0F6;
 }
 
@@ -99,7 +126,7 @@ a {
     // margin-top: auto;
     margin-bottom: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
 }
 
 .date {
@@ -174,7 +201,8 @@ a {
       align-items: center;
       justify-content: flex-end;
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
+      right: 20px;
 
       span {
           margin-left: 3px;

@@ -74,7 +74,7 @@ class AnnotationCard extends React.Component {
     const totalUpvoteCount = this.props.annotation.attributes.upvoteCountExceptUser + (annotationUpvote.data ? 1 : 0);
 		return (
 			<div className={styles.annotationCard}>
-				<div className={styles.left}>
+				<div className={cnames(styles.left, ppCategoryToClass[annotationAttrs.ppCategory])}>
 					<p className={cnames(styles.quote, ppCategoryToClass[annotationAttrs.ppCategory])}>
 						{'"' + annotationAttrs.quote + '"'}
 					</p>
