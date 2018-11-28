@@ -74,12 +74,14 @@ class AnnotationCard extends React.Component {
     const totalUpvoteCount = this.props.annotation.attributes.upvoteCountExceptUser + (annotationUpvote.data ? 1 : 0);
 		return (
 			<div className={styles.annotationCard}>
-				<div className={cnames(styles.left, ppCategoryToClass[annotationAttrs.ppCategory])}>
-					<p className={cnames(styles.quote, ppCategoryToClass[annotationAttrs.ppCategory])}>
-						{'"' + annotationAttrs.quote + '"'}
-					</p>
-					<p className={cnames(styles.hostName)}>{extractHostname(annotationAttrs.url)}</p>
-				</div>
+				<a className={cnames(styles.left, ppCategoryToClass[annotationAttrs.ppCategory])} href={annotationAttrs.url + "#pp-annotation-" + this.props.annotation.id} target="_blank">
+					<div>
+						<p className={cnames(styles.quote, ppCategoryToClass[annotationAttrs.ppCategory])}>
+							{'"' + annotationAttrs.quote + '"'}
+						</p>
+						<p className={cnames(styles.hostName)}>{extractHostname(annotationAttrs.url)}</p>
+					</div>
+				</a>
 				<div className={styles.separator}></div>
 				<div className={styles.right}>
 					<div className={styles.topBar}>
