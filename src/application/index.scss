@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+$open-sans: "Open Sans", sans-serif;
+$roboto: 'Roboto', sans-serif;
+
 body, html {
     margin: 0;
+    font-family: $open-sans;
+    min-height: 100%;
+    background-color: #ECF0F6;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 .panel {
@@ -9,6 +25,7 @@ body, html {
 .topBar {
     background-color: white;
     box-shadow: 0 0 8px 0 rgba(0,0,0,.1);
+    font-family: $roboto;
 }
 
 

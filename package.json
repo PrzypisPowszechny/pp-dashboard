@@ -11,18 +11,21 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@atlaskit/spinner": "^9.0.12",
     "@material-ui/core": "^1.0.0",
+    "@types/chrome": "0.0.75",
     "classnames": "^2.2.6",
     "firebase": "^5.5.9",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
     "prop-types": "^15.6.1",
-    "react": "^16.3.0",
+    "react": "^16.6.3",
     "react-dom": "^16.3.0",
     "react-hot-loader": "^4.0.1",
     "react-icons-kit": "^1.2.0",
     "react-router-dom": "^4.3.1",
-		"react-transition-group": "^2.3.1"
+    "react-transition-group": "^2.3.1",
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",

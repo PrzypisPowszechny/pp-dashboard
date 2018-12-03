@@ -1,10 +1,24 @@
 .navigation {
     list-style: none;
     margin: 0;
-    padding: 20px;
+    padding: 20px 40px;
+
+    // a {
+    //     color: #34495E;
+    // }
+
 }
 
 .navItem {
     display: inline;
-    margin-right: 20px;
+    margin-right: 40px;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    user-select: none;
+    color: #34495E;
+
 }

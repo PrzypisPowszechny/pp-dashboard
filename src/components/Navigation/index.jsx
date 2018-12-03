@@ -28,12 +28,12 @@ class Navigation extends React.Component {
 			<ul className={styles.navigation}>
 				<li className={styles.navItem}>
 					<Link to="/">
-						<span>Przeglądaj przypisy</span>
+						<span className={styles.label}>Przeglądaj przypisy</span>
 					</Link>
 				</li>
 				<li className={styles.navItem}>
 					<Link to="/userAnnotations">
-						<span>Moje przypisy</span>
+						<span className={styles.label}>Moje przypisy</span>
 					</Link>
 				</li>
 			</ul>

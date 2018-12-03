@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&subset=latin-ext');
 
 $open-sans: "Open Sans", sans-serif;
+
 $additional-info-color: #5679B0;
 $clarification-color: #FDE300;
 $error-color: #F7AB00;
@@ -15,11 +16,6 @@ $demagog-false-color: #E84F2B;
 $demagog-lie-color: #FEBC1E;
 $demagog-unknown-color: #229EE5;
 
-a {
-    text-decoration: none !important;
-    color: black;
-    cursor: pointer;
-}
 
 .annotation-card {
     font-family: $open-sans;
