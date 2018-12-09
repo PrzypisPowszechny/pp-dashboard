@@ -3,14 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     padding: 20px 10px;
-    justify-content: center;
+    justify-content: flex-end;
 
 
     .card-container {
         margin-right: 20px;
         margin-bottom: 20px;
         display: inline;
-        width: 400px;
-        height: 260px;
+        width: 375px;
+        height: 240px;
     }
 }

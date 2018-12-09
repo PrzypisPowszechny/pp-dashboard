@@ -54,7 +54,7 @@ class AnnotationGrid extends React.Component {
 		return (
 			<div className={styles.annotationGrid}>
 				{this.props.annotations.map((annotation) =>
-					(<div className={styles.cardContainer}>
+					(<div key={annotation.id} className={styles.cardContainer}>
 						<AnnotationCard annotation={annotation} />
 					</div>))}
 			</div>
