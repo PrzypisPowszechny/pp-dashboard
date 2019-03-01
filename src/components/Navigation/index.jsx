@@ -3,21 +3,31 @@ import * as React from 'react';
 import cnames from 'classnames';
 
 import {Link} from 'react-router-dom';
+import { withRouter } from "react-router";
 
 import styles from './index.scss';
 
-
 class Navigation extends React.Component {
+
 
 	render() {
 		return (
 			<ul className={styles.navigation}>
-				<li className={styles.navItem}>
+				<div className={styles.groupHeader}>
+					<div className={styles.ppLogo} />
+				</div>
+				<li className={cnames(
+					styles.navItem,
+					(this.props.location.pathname === '/') ? styles.active : ''
+				)}>
 					<Link to="/">
-						<span className={styles.label}>Przeglądaj przypisy</span>
+						<span className={styles.label}>Przypisy</span>
 					</Link>
 				</li>
-				<li className={styles.navItem}>
+				<li className={cnames(
+					styles.navItem,
+					(this.props.location.pathname === '/userAnnotations') ? styles.active : ''
+				)}>
 					<Link to="/userAnnotations">
 						<span className={styles.label}>Moje przypisy</span>
 					</Link>
@@ -27,4 +37,5 @@ class Navigation extends React.Component {
 	}
 }
 
-export default hot(module)(Navigation);
+
+export default hot(module)(withRouter(Navigation));

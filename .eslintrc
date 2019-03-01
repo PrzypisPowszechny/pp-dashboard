@@ -25,6 +25,7 @@
     "class-methods-use-this": "off",
     "comma-dangle": "warn",
     "comma-spacing": "warn",
+    "comma-style": "off",
     "consistent-return": "warn",
     "curly": "off",
     "default-case": "off",
