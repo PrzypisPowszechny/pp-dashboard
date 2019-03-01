@@ -12,27 +12,31 @@ class Navigation extends React.Component {
 
 	render() {
 		return (
-			<ul className={styles.navigation}>
+			<div className={styles.navigation}>
 				<div className={styles.groupHeader}>
 					<div className={styles.ppLogo} />
 				</div>
-				<li className={cnames(
-					styles.navItem,
-					(this.props.location.pathname === '/') ? styles.active : ''
-				)}>
-					<Link to="/">
-						<span className={styles.label}>Przypisy</span>
-					</Link>
-				</li>
-				<li className={cnames(
-					styles.navItem,
-					(this.props.location.pathname === '/userAnnotations') ? styles.active : ''
-				)}>
-					<Link to="/userAnnotations">
-						<span className={styles.label}>Moje przypisy</span>
-					</Link>
-				</li>
-			</ul>
+				<Link
+					className={cnames(
+						styles.navItem,
+						(this.props.location.pathname === '/') ? styles.active : ''
+					)}
+					to="/"
+					href
+				>
+					<span className={styles.label}>Przypisy</span>
+				</Link>
+				<Link
+					className={cnames(
+						styles.navItem,
+						(this.props.location.pathname === '/userAnnotations') ? styles.active : ''
+					)}
+					to="/userAnnotations"
+					href
+				>
+					<span className={styles.label}>Moje przypisy</span>
+				</Link>
+			</div>
 		)
 	}
 }

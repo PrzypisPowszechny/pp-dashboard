@@ -2,7 +2,7 @@ import {hot} from 'react-hot-loader';
 import * as React from 'react';
 import cnames from 'classnames';
 import _ from 'lodash';
-import AnnotationGrid from '../../components/AnnotationGrid'
+import AnnotationCard from '../../components/AnnotationCard/index';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import styles from './index.scss';
@@ -36,7 +36,12 @@ class PageUserAnnotations extends React.Component {
 			<div className={styles.page}>
 				{this.state.loaded ?
 					this.state.annotations.length > 0 ?
-						<AnnotationGrid annotations={this.state.annotations} />
+						<div className={styles.annotationFeed}>
+							{this.state.annotations.map((annotation) =>
+								(<div key={annotation.id} className={styles.cardContainer}>
+									<AnnotationCard annotation={annotation} />
+								</div>))}
+						</div>
 						:
 						<div className={styles.welcomeMessage}>
 							<p className={styles.welcomeText}>Wygląda na to, że nie dodałeś jeszcze żadnych przypisów!</p>

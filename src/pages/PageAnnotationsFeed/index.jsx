@@ -1,7 +1,7 @@
 import {hot} from 'react-hot-loader';
 import * as React from 'react';
 import cnames from 'classnames';
-import AnnotationGrid from '../../components/AnnotationGrid'
+import AnnotationCard from '../../components/AnnotationCard/index'
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import styles from './index.scss';
@@ -32,7 +32,12 @@ class PageAnnotationsFeed extends React.Component {
 		return (
 			<div className={styles.page}>
 				{this.state.loaded ?
-					<AnnotationGrid annotations={this.state.annotations} />
+					<div className={styles.annotationFeed}>
+						{this.state.annotations.map((annotation) =>
+							(<div key={annotation.id} className={styles.cardContainer}>
+								<AnnotationCard annotation={annotation} />
+							</div>))}
+					</div>
 					:
 					<div className={styles.onLoading}>
 						<CircularProgress />
