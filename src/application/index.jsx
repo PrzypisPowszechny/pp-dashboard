@@ -1,7 +1,6 @@
 import { hot } from 'react-hot-loader';
 import * as React from 'react';
 
-// Set language for momentjs time display
 import 'moment/locale/pl';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -13,7 +12,7 @@ import PageAnnotationsFeed from '../pages/PageAnnotationsFeed'
 import PageUserAnnotations from '../pages/PageUserAnnotations'
 
 
-class UserPanel extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class Dasboard extends React.Component {
 
 	render() {
 		return (
@@ -27,7 +26,7 @@ class UserPanel extends React.Component { // eslint-disable-line react/prefer-st
 							<Route
 								exact
 								path="/"
-								render={() => <PageAnnotationsFeed />}
+								render={(props) => <PageAnnotationsFeed {...props} />}
 							/>
 							<Route
 								exact
@@ -41,4 +40,4 @@ class UserPanel extends React.Component { // eslint-disable-line react/prefer-st
 		);
 	}
 }
-export default hot(module)(UserPanel);
+export default hot(module)(Dasboard);

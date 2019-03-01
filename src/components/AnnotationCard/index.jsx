@@ -86,10 +86,6 @@ function extractHostname(url) {
 }
 
 class AnnotationCard extends React.Component {
-	constructor() {
-		super()
-		// this.state = {feedbackType: 'bug'}
-	}
 
 	handleClick = (e) =>
 		e.stopPropagation();

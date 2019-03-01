@@ -1,7 +1,6 @@
 import {hot} from 'react-hot-loader';
 import * as React from 'react';
 import cnames from 'classnames';
-import Spinner from '@atlaskit/spinner';
 import AnnotationGrid from '../../components/AnnotationGrid'
 import CircularProgress from '@material-ui/core/CircularProgress';
 

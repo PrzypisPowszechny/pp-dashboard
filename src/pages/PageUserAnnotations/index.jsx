@@ -40,10 +40,6 @@ class PageUserAnnotations extends React.Component {
 						:
 						<div className={styles.welcomeMessage}>
 							<p className={styles.welcomeText}>Wygląda na to, że nie dodałeś jeszcze żadnych przypisów!</p>
-							<a className={styles.linkHelp}>
-								{/* <Icon icon={ic_help_outline} /> */}
-							Dowiedz się, jak to zrobić
-							</a>
 						</div>
 					:
 					<div className={styles.onLoading}>
