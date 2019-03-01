@@ -1,7 +1,8 @@
 .navigation {
     list-style: none;
     margin: 0;
-    padding: 20px 40px;
+    padding: 0;
+    display: flex;
 
     // a {
     //     color: #34495E;
@@ -9,9 +10,35 @@
 
 }
 
+.groupHeader{
+    border-right: 1px solid #D8D8D8;
+    padding: 0 10px;
+    margin: 10px 20px;
+    display: flex;
+    width: 60px;
+
+}
+
+.ppLogo {
+    background-image: url('../../assets/ppLogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    flex: 1;
+}
+
 .navItem {
-    display: inline;
-    margin-right: 40px;
+    margin-right: 20px;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+
+    &.active {
+        border-bottom: 3px solid #85D8DB;
+    }
+    &:hover {
+        border-bottom: 3px solid #85D8DB;
+    }
 }
 
 .label {
@@ -19,6 +46,5 @@
     font-size: 14px;
     font-weight: 500;
     user-select: none;
-    color: #34495E;
 
 }

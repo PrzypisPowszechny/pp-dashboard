@@ -31,7 +31,7 @@ class Dasboard extends React.Component {
 							<Route
 								exact
 								path="/userAnnotations"
-								render={() => <PageUserAnnotations />}
+								render={(props) => <PageUserAnnotations {...props} />}
 							/>
 						</Switch>
 					</div>
