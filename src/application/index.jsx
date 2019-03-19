@@ -10,7 +10,7 @@ import styles from './index.scss';
 import Navigation from '../components/Navigation'
 import PageAnnotationsFeed from '../pages/PageAnnotationsFeed'
 import PageUserAnnotations from '../pages/PageUserAnnotations'
-import ExtensionUserManager from 'ExtensionUserManager';
+import ExtensionUserManager from '../ExtensionUserManager';
 
 
 class Dashboard extends React.Component {
@@ -24,39 +24,44 @@ class Dashboard extends React.Component {
 	}
 	
 	componentDidMount() {
-		this.userManager.addUserUpdatedListener(this.onLogin);
+		this.userManager.addUserUpdatedListener(this.onUserUpdate);
 		this.userManager.init();
 		this.userManager.pollForUserData();
 	}
 	
-	onLogin = (user) => {
+	onUserUpdate = (user) => {
 		this.setState({user: user});
 	}
 	
 	render() {
-		return (
-			<Router>
-				<div className={styles.panel}>
-					<div className={styles.topBar}>
-						<Navigation user={this.state.user}/>
+		if (this.state.user) {
+			return (
+				<Router>
+					<div className={styles.panel}>
+						<div className={styles.topBar}>
+							<Navigation user={this.state.user}/>
+						</div>
+						<div className={styles.pageContainer}>
+							<Switch>
+								<Route
+									exact
+									path="/"
+									render={(props) => <PageAnnotationsFeed {...props} user={this.state.user}/>}
+								/>
+								<Route
+									exact
+									path="/userAnnotations"
+									render={(props) => <PageUserAnnotations {...props} user={this.state.user}/>}
+								/>
+							</Switch>
+						</div>
 					</div>
-					<div className={styles.pageContainer}>
-						<Switch>
-							<Route
-								exact
-								path="/"
-								render={(props) => <PageAnnotationsFeed {...props} user={this.state.user}/>}
-							/>
-							<Route
-								exact
-								path="/userAnnotations"
-								render={(props) => <PageUserAnnotations {...props} user={this.state.user}/>}
-							/>
-						</Switch>
-					</div>
-				</div>
-			</Router>
-		);
+				</Router>
+			);
+		} else {
+			// TODO application when the user is unlogged
+			return null;
+		}
 	}
 }
 

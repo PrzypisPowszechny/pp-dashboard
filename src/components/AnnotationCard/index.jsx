@@ -2,6 +2,7 @@ import {hot} from 'react-hot-loader';
 import * as React from 'react';
 import cnames from 'classnames';
 import moment from 'moment';
+import {loggedAxios} from '../../requests';
 
 import {Icon} from 'react-icons-kit';
 import {ic_star} from 'react-icons-kit/md/ic_star';

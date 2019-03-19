@@ -8,6 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import styles from './index.scss';
 import {Icon} from 'react-icons-kit';
 import {ic_help_outline} from 'react-icons-kit/md/ic_help_outline';
+import {loggedAxios} from "requests";
 
 
 class PageUserAnnotations extends React.Component {
@@ -20,12 +21,9 @@ class PageUserAnnotations extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=150', {credentials: 'include'})
-			.then((response) => {
-				return response.json();
-			})
+		loggedAxios.get('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=150', {user: this.props.user})
 			.then((myJson) => {
-				const userAnnotations = _.filter(myJson.data, (annotation) => annotation.attributes.doesBelongToUser === true);
+				const userAnnotations = _.filter(myJson.data.data, (annotation) => annotation.attributes.doesBelongToUser === true);
 				this.setState({loaded: true, annotations: userAnnotations});
 			})
 	}

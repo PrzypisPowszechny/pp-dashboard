@@ -3,7 +3,7 @@ import * as React from 'react';
 import cnames from 'classnames';
 import AnnotationCard from '../../components/AnnotationCard/index'
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import {loggedAxios} from '../../requests';
 import styles from './index.scss';
 
 
@@ -15,19 +15,16 @@ class PageAnnotationsFeed extends React.Component {
 			annotations: [],
 		}
 	}
-
-
+	
+	
 	componentDidMount() {
-		fetch('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=400')
-			.then((response) => {
-				return response.json();
-			})
+		loggedAxios.get('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=150', {user: this.props.user})
 			.then((myJson) => {
-				this.setState({loaded: true, annotations: myJson.data});
+				this.setState({loaded: true, annotations: myJson.data.data});
 			})
 	}
-
-
+	
+	
 	render() {
 		return (
 			<div className={styles.page}>
@@ -35,12 +32,12 @@ class PageAnnotationsFeed extends React.Component {
 					<div className={styles.annotationFeed}>
 						{this.state.annotations.map((annotation) =>
 							(<div key={annotation.id} className={styles.cardContainer}>
-								<AnnotationCard annotation={annotation} />
+								<AnnotationCard annotation={annotation}/>
 							</div>))}
 					</div>
 					:
 					<div className={styles.onLoading}>
-						<CircularProgress />
+						<CircularProgress/>
 					</div>
 				}
 			</div>
