@@ -20,6 +20,7 @@ class ExtensionUserManager {
 	}
 	
 	extensionMessageHandler = (request, sender, sendResponse) => {
+		console.debug('Updated user data');
 		if (request.action === 'UPDATE_LOGIN_DATA') {
 			const user = request.payload;
 			this.onUserDataChanged(user);

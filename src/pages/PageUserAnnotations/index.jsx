@@ -20,7 +20,7 @@ class PageUserAnnotations extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('https://app.przypispowszechny.pl/api/annotations?page%5Blimit%5D=150', {credentials: 'include'})
+		fetch('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=150', {credentials: 'include'})
 			.then((response) => {
 				return response.json();
 			})

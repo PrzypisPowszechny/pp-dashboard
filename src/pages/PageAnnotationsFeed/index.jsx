@@ -18,7 +18,7 @@ class PageAnnotationsFeed extends React.Component {
 
 
 	componentDidMount() {
-		fetch('https://app.przypispowszechny.pl/api/annotations?page%5Blimit%5D=400')
+		fetch('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=400')
 			.then((response) => {
 				return response.json();
 			})
