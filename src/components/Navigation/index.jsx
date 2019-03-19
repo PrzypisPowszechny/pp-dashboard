@@ -13,7 +13,7 @@ class Navigation extends React.Component {
 		const user = this.props.user;
 		if (user) {
 			return (
-				<span> {user.userId} </span>
+				<span> {user.userEmail} </span>
 			);
 		} else {
 			return null;

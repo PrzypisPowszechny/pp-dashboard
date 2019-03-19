@@ -10,8 +10,7 @@ import styles from './index.scss';
 import Navigation from '../components/Navigation'
 import PageAnnotationsFeed from '../pages/PageAnnotationsFeed'
 import PageUserAnnotations from '../pages/PageUserAnnotations'
-import ExtensionUserManager from '../ExtensionUserManager';
-
+import ExtensionUserManager, {UserRoles} from "ExtensionUserManager";
 
 class Dashboard extends React.Component {
 	
@@ -19,6 +18,7 @@ class Dashboard extends React.Component {
 		super(props);
 		this.state = {
 			user: null,
+			userLoaded: false,
 		};
 		this.userManager = new ExtensionUserManager();
 	}
@@ -30,38 +30,62 @@ class Dashboard extends React.Component {
 	}
 	
 	onUserUpdate = (user) => {
-		this.setState({user: user});
+		this.setState({
+			user: user,
+			userLoaded: true,
+		});
 	}
 	
 	render() {
-		if (this.state.user) {
-			return (
-				<Router>
-					<div className={styles.panel}>
-						<div className={styles.topBar}>
-							<Navigation user={this.state.user}/>
-						</div>
-						<div className={styles.pageContainer}>
-							<Switch>
-								<Route
-									exact
-									path="/"
-									render={(props) => <PageAnnotationsFeed {...props} user={this.state.user}/>}
-								/>
-								<Route
-									exact
-									path="/userAnnotations"
-									render={(props) => <PageUserAnnotations {...props} user={this.state.user}/>}
-								/>
-							</Switch>
-						</div>
-					</div>
-				</Router>
-			);
-		} else {
-			// TODO application when the user is unlogged
-			return null;
+		const {
+			user,
+			userLoaded,
+		} = this.state;
+		
+		if (false) {// todo if (extension not installed) ask to install
+			return (<span>please install extension</span>);
+			
 		}
+		
+		if (!userLoaded) {
+			// Todo "loading screen"
+			return (<span>syncing with extenion</span>);
+			
+		}
+		
+		if (!user) {
+			// Todo invite to login
+			return (<span>please log in</span>);
+		}
+		
+		return (
+			<Router>
+				<div className={styles.panel}>
+					<div className={styles.topBar}>
+						<Navigation user={this.state.user}/>
+					</div>
+					<div className={styles.pageContainer}>
+						<Switch>
+							<Route
+								exact
+								path="/"
+								render={(props) => <PageAnnotationsFeed {...props} user={this.state.user}/>}
+							/>
+							< Route
+								exact
+								path="/userAnnotations"
+								render={(props) => <PageUserAnnotations {...props} user={this.state.user}/>}
+							/>
+							{user.userRole === UserRoles.editor &&
+							<Aux>
+								{/* < Route only available to editor (...) >*/}
+							</Aux>
+							}
+						</Switch>
+					</div>
+				</div>
+			</Router>
+		);
 	}
 }
 

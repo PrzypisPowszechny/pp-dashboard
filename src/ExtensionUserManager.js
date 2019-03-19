@@ -1,3 +1,9 @@
+
+export const UserRoles = {
+  reader: 'reader',
+  editor: 'editor',
+};
+
 class ExtensionUserManager {
 	port;
 	// TODO use dev for now, in the future set in agreement with the environment
