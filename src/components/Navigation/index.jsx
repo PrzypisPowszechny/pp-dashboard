@@ -9,7 +9,17 @@ import styles from './index.scss';
 
 class Navigation extends React.Component {
 
-
+	renderUser() {
+		const user = this.props.user;
+		if (user) {
+			return (
+				<span> {user.userEmail} </span>
+			);
+		} else {
+			return null;
+		}
+	}
+	
 	render() {
 		return (
 			<div className={styles.navigation}>
@@ -36,6 +46,7 @@ class Navigation extends React.Component {
 				>
 					<span className={styles.label}>Moje przypisy</span>
 				</Link>
+				{this.renderUser()}
 			</div>
 		)
 	}

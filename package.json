@@ -13,6 +13,7 @@
   "dependencies": {
     "@material-ui/core": "^1.0.0",
     "@types/chrome": "0.0.75",
+    "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "firebase": "^5.5.9",
     "lodash": "^4.17.11",
