@@ -1,0 +1,140 @@
+# When caching node dependencies we include node version as some dependencies may vary also on a per node version basis.
+
+
+version: 2.1
+executors:
+  node-pp-devdeploy1:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/repo
+    environment:
+      PP_API: devdeploy1
+
+  node-pp-prod:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/repo
+    environment:
+      PP_API: prod
+
+jobs:
+  install:
+    executor: node-pp-devdeploy1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-node-10-dependencies-{{ checksum "package-lock.json" }}-and-{{ checksum "package.json" }}
+      - run: test -e node_modules || npm ci
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-node-10-dependencies-{{ checksum "package-lock.json" }}-and-{{ checksum "package.json" }}
+      - run: mkdir workspace
+      - run: mv node_modules workspace/node_modules
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - node_modules
+
+  build:
+    executor: node-pp-devdeploy1
+    steps:
+      - checkout
+      - attach_workspace:
+            at: workspace
+      - run: ln -s workspace/node_modules node_modules
+      - run: npm run build
+      - run: mv dist workspace/dist
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - dist
+
+  build-prod:
+    executor: node-pp-prod
+    steps:
+      - checkout
+      - attach_workspace:
+            at: workspace
+      - run: ln -s workspace/node_modules node_modules
+      - run: npm run build
+      - run: mv dist workspace/dist
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - dist
+
+  release-devdeploy1:
+    executor: node-pp-devdeploy1
+    steps:
+      - checkout
+      - attach_workspace:
+            at: workspace
+      - run: ln -s workspace/node_modules node_modules
+      - run: ln -s workspace/dist dist
+      - run:
+          name: Deploy to Firebase devdeploy1 project
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --project=pp-dashboard-devdeploy1
+
+  release-prod:
+    executor: node-pp-prod
+    steps:
+      - checkout
+      - attach_workspace:
+            at: workspace
+      - run: ln -s workspace/node_modules node_modules
+      - run: ln -s workspace/dist dist
+      - run:
+          name: Deploy to Firebase prod project
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --project=pp-dashboard-prod
+
+workflows:
+  version: 2
+  test-build:
+    jobs:
+      - install:
+          filters:
+            # note: this is alternative
+            branches:
+              ignore:
+                - master
+                - ci-test
+            tags:
+              ignore: /.*/
+      - build:
+          requires:
+            - install
+  devdevploy1-release:
+    jobs:
+      - install:
+          filters:
+            # note: this is alternative
+            branches:
+              only:
+                - master
+                - ci-test
+            tags:
+              ignore: /.*/
+      - build:
+          requires:
+            - install
+      - release-devdeploy1:
+          requires:
+            - build
+
+  prod-release:
+    jobs:
+      - install:
+          filters:
+            # note: this is alternative
+            branches:
+              only: prod
+            tags:
+              ignore: /.*/
+      - build-prod:
+          requires:
+            - install
+      - release-prod:
+          requires:
+            - build-prod
