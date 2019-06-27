@@ -9,6 +9,7 @@ executors:
     working_directory: ~/repo
     environment:
       PP_API: devdeploy1
+      PP_DEV: true
 
   node-pp-prod:
     docker:
@@ -16,6 +17,7 @@ executors:
     working_directory: ~/repo
     environment:
       PP_API: prod
+      PP_DEV: false
 
 jobs:
   install:
@@ -98,8 +100,9 @@ workflows:
             # note: this is alternative
             branches:
               ignore:
+                - prod
                 - master
-                - ci-test
+                - devdeploy1 # Additional branch for testing deploying with CI to dev deployment
             tags:
               ignore: /.*/
       - build:
@@ -113,7 +116,7 @@ workflows:
             branches:
               only:
                 - master
-                - ci-test
+                - devdeploy1 # Additional branch for testing deploying with CI to dev deployment
             tags:
               ignore: /.*/
       - build:
