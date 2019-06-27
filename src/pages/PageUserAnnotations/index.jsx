@@ -21,8 +21,9 @@ class PageUserAnnotations extends React.Component {
 	}
 
 	componentDidMount() {
-		// TODO: make it possible to customise between devdeploy1 and prod base on PP_API environment
-		loggedAxios.get('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=150', {user: this.props.user})
+		loggedAxios.get(
+			`${PPSettings.API_URL}/annotations?page%5Blimit%5D=150`,
+			{ user: this.props.user })
 			.then((myJson) => {
 				const userAnnotations = _.filter(myJson.data.data, (annotation) => annotation.attributes.doesBelongToUser === true);
 				this.setState({loaded: true, annotations: userAnnotations});

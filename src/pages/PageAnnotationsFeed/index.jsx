@@ -18,9 +18,10 @@ class PageAnnotationsFeed extends React.Component {
 	
 	
 	componentDidMount() {
-		// TODO: make it possible to customise between devdeploy1 and prod base on PP_API environment
-		loggedAxios.get('https://devdeploy1.przypispowszechny.pl/api/annotations?page%5Blimit%5D=150', {user: this.props.user})
-			.then((myJson) => {
+		loggedAxios.get(
+			`${PPSettings.API_URL}/annotations?page%5Blimit%5D=150`,
+			{ user: this.props.user }
+			).then((myJson) => {
 				this.setState({loaded: true, annotations: myJson.data.data});
 			})
 	}
