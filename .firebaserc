@@ -1,5 +1,6 @@
 {
   "projects": {
-    "production": "przypis-powszechny-panel"
+    "prod": "pp-dashboard-prod",
+    "devdeploy1": "pp-dashboard-devdeploy1"
   }
 }
